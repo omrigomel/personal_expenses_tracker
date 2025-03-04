@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const FINNHUB_TOKEN = "cu788j1r01qkuccsd0rgcu788j1r01qkuccsd0s0";
+const FINNHUB_TOKEN = "enter your finnhub token here "; 
 const TICKERS = ["AAPL", "MSFT", "AMZN", "GOOG", "NVDA", "TSLA", "META"];
 const CACHE_DURATION = 60 * 10000; //refresh every 10 min
 
