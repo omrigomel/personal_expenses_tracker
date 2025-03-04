@@ -1,5 +1,4 @@
-Folder PATH listing
-Volume serial number is 32F8-FAC7
+
 C:.
 |   docker-compose.yml
 |   Dockerfile
