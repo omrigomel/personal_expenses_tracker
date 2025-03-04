@@ -1,0 +1,60 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: expense-db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: expenses_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - expense-network
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root --password=password || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: expense-backend
+    environment:
+      DATABASE_URL: mysql+pymysql://root:password@db/expenses_db
+      PYTHONPATH: /app:/app/DataBase
+    volumes:
+      - ./app:/app
+      - ./DataBase:/app/DataBase
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - expense-network
+    entrypoint: >
+      sh -c "sleep 15 && python /app/DataBase/create_tables.py && uvicorn main:app --host 0.0.0.0 --port 8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: expense-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - expense-network
+
+networks:
+  expense-network:
+    driver: bridge
+
+volumes:
+  db_data:

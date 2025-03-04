@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+pymysql
+cryptography
+requests
+beautifulsoup4
+passlib[bcrypt]
+python-dateutil
+pytest
+hypothesis
+pytest-cov
+httpx

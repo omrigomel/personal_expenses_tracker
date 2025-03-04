@@ -1,0 +1,112 @@
+Folder PATH listing
+Volume serial number is 32F8-FAC7
+C:.
+|   docker-compose.yml
+|   Dockerfile
+|   README.md
+|   requirements.txt
+|   tree.txt
+|   
++---app
+|   |   main.py
+|   |   models.py
+|   |   recovery.py
+|   |   routes.py
+|   |   security.py
+|   |   utiles.py
+|   |   __init__.py
+|   |   
+|   \---__pycache__
+|           main.cpython-312.pyc
+|           models.cpython-312.pyc
+|           recovery.cpython-312.pyc
+|           routes.cpython-312.pyc
+|           security.cpython-312.pyc
+|           utiles.cpython-312.pyc
+|           __init__.cpython-312.pyc
+|           
++---DataBase
+|   |   create_tables.py
+|   |   database.py
+|   |   DBmodels.py
+|   |   __init__.py
+|   |   
+|   \---__pycache__
+|           database.cpython-312.pyc
+|           DBmodels.cpython-312.pyc
+|           __init__.cpython-312.pyc
+|           
++---frontend
+|   |   .gitignore
+|   |   Dockerfile
+|   |   Excalidraw.PNG
+|   |   package-lock.json
+|   |   package.json
+|   |   tailwind.config.js
+|   |   
+|   +---public
+|   |       favicon.ico
+|   |       index.html
+|   |       logo192.png
+|   |       logo512.png
+|   |       manifest.json
+|   |       robots.txt
+|   |       
+|   \---src
+|       |   Account.js
+|       |   AddExpense.js
+|       |   Analysis.js
+|       |   App.js
+|       |   ChatAndRecommendations.js
+|       |   ForgotPassword.js
+|       |   Home.js
+|       |   index.css
+|       |   index.js
+|       |   Login.js
+|       |   MonthlyView.js
+|       |   OpenAiChat.js
+|       |   Register.js
+|       |   reportWebVitals.js
+|       |   Sidebar.js
+|       |   UserContext.js
+|       |   
+|       +---.idea
+|       |       .gitignore
+|       |       modules.xml
+|       |       src.iml
+|       |       workspace.xml
+|       |       
+|       \---Connectors
+|               AnalystRecommendations.js
+|               api.js
+|               ExternalAPI.js
+|               OpenAIAPI.js
+|               
+\---tests
+    |   .gitignore
+    |   database_test.py
+    |   DBMODELS_TEST.py
+    |   DB_TEST.py
+    |   integration_test.py
+    |   pytest.ini
+    |   test.db
+    |   test_unit.py
+    |   __init__.py
+    |   
+    +---.pytest_cache
+    |   |   .gitignore
+    |   |   CACHEDIR.TAG
+    |   |   README.md
+    |   |   
+    |   \---v
+    |       \---cache
+    |               nodeids
+    |               stepwise
+    |               
+    \---__pycache__
+            DBMODELS_TEST.cpython-312-pytest-8.3.4.pyc
+            DB_TEST.cpython-312-pytest-8.3.4.pyc
+            integration_test.cpython-312-pytest-8.3.4.pyc
+            test_unit.cpython-312-pytest-8.3.4.pyc
+            __init__.cpython-312.pyc
+            
