@@ -220,17 +220,24 @@ python -m pytest integration_test.py
 
 ## Installation & Running with Docker Compose
 
+## API Key Configuration
+
+**Important:** After completing Step 1, you must manually insert your own API keys in the connector files. The API keys for OpenAI and Finnhub (displayed as "API_KEY" & "FINNHUB_TOKEN") are not included in the repository.  
+Please open and edit the following files to add your keys:
+- `frontend/src/Connectors/OpenAIAPI.js`
+- `frontend/src/Connectors/AnalystRecommendations.js`
+
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/EASS-HIT-PART-A-2024-CLASS-VI/personal-expneses-OmriGomel
-   cd personal-expeneses
+   cd personal-expeneses   
+
 
 2. **Build and start containers:**
    ```bash
    docker-compose up --build
 
-3.
-## Containers:
+3.## Containers:
 
 - **db** (MySQL): Exposed on port 3306.
 - **backend** (FastAPI): Exposed on port 8000.
