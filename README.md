@@ -274,9 +274,6 @@ Please open and edit the following files to add your keys:
 - **GET** /expenses/recent/{username} — Last 5 expenses for a user
 - **POST** /budgets/ — Define monthly budget
 
-## API Key Note
-- **Note: The OpenAI API key Finnhub API key are included in the code for personal and non-commercial use only. If you plan to use this project in a commercial context, please remove the keys or handle them securely via environment variables or a secrets manager.**
 
 
-## Demo Video
-[![Watch the video](https://img.youtube.com/vi/_5tFXJQIzi4/0.jpg)](https://www.youtube.com/watch?v=_5tFXJQIzi4)
+
