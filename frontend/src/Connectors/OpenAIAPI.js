@@ -1,5 +1,5 @@
 const BASE_URL = "https://api.openai.com/v1/chat/completions";
-const API_KEY = "Enter your api key here"; // הכנס את ה-API Key הנכון
+const API_KEY = "Enter your api key here"; 
 
 export const sendMessageToOpenAI = async (message) => {
     try {
